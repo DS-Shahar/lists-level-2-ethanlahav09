@@ -1,13 +1,3 @@
-public class Main
-{
-	public static void main(String[] args) {
-		
-        
-        int [] arr={8,1,5,6,7,8,2,2};
-        Node<Integer> head1=buildList(arr);
-        System.out.println(distanveFromEdge(head1, 8));
-
-	}
 
   public static int distanveFromEdge(Node<Integer> head, int num)
     {
@@ -34,7 +24,25 @@ public class Main
         return dis1+dis2;
         
     }
+	
+	public static boolean isItUnique(Node<Integer> head)
+    {
+        while(head.hasNext())
+        {
+            if(head.getValue()==head.getNext().getValue())
+                return false;
+            head=head.getNext();
+        }
+        return true;
+    }
 
+
+
+
+
+
+
+	
 }
 
 
